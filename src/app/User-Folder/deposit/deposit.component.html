@@ -1,0 +1,9 @@
+<h1>Deposit</h1>
+<form [formGroup]="depositForm" (ngSubmit)="depositData(depositForm.value)">
+    <input type="text" formControlName="accountNumber" placeholder="Enter Account Number"><br>
+    <input type="text" formControlName="amount" placeholder="Enter Amount"><br>
+    <input type="text" formControlName="description" placeholder="Enter description"><br>
+    <input type="text" formControlName="state" placeholder="State"><br>
+    <input type="text" formControlName="transactionType" placeholder="TransactionType"><br>
+    <button>Deposit</button>
+</form>

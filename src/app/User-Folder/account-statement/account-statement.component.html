@@ -1,0 +1,29 @@
+
+<div *ngIf="showData">
+    <h1 align="center">Account Statement</h1>
+
+
+<table class="table table-bordered">
+    <!-- <caption>List of Transactions</caption> -->
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">transactionType</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Weather of transactionData" >
+            <td >{{Weather.transactionId}}</td>
+            <td >{{Weather.transactionType}}</td>
+            <td >{{Weather.amount}}</td>
+            <td >{{Weather.email}}</td>
+            <td >{{Weather.date}}</td>
+            <td >{{Weather.description}}</td>
+          </tr>
+    </tbody>
+  </table>
+</div>

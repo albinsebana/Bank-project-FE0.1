@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">Withdraw Money</div>
+    <div  align="center" class="card-body">
+      <h5 class="card-title">Enter The Details</h5>
+      <div align="center" class="card" style="width: 18rem;">
+        <form [formGroup]="withdrawalForm" (ngSubmit)="withdrawalData(withdrawalForm.value)">
+        <ul class="list-group list-group-light">
+            
+          <li class="list-group-item px-3"><input type="text" formControlName="accountNumber" placeholder="Enter Account Number"><br></li>
+          <li class="list-group-item px-3"><input type="text" formControlName="amount" placeholder="Enter Amount"><br></li>
+          <li class="list-group-item px-3"><input type="text" formControlName="description" placeholder="Enter description"><br></li>
+          <li class="list-group-item px-3"><input type="text" formControlName="state" placeholder="State"><br></li>
+          <li class="list-group-item px-3"><input type="text" formControlName="transactionType" placeholder="TransactionType"><br><br></li>
+         
+        </ul>
+    </form>
+      </div>
+      <a href="#" class="btn btn-primary">Withdraw</a>
+    </div>
+  </div>
+
+
+<h1></h1>
+
+    
+    
+    
+    <!-- <input type="text" formControlName="state" placeholder="State"><br>
+    <input type="text" formControlName="transactionType" placeholder="TransactionType"><br> -->
+    <!-- <button>Withdraw</button> -->

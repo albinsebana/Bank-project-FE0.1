@@ -1,0 +1,68 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" routerLink="/adminHome">Back</a>
+  </li>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <form class="d-flex">
+        <input class="form-control me-2" type="searchInput" [(ngModel)]="searchTerm" aria-label="Search">
+        <button class="btn btn-outline-success" (click)="search()" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- Add this inside the <div *ngIf="showData"> -->
+<!-- <div>
+  <label for="searchInput">Search: </label>
+  <input type="text" id="searchInput" [(ngModel)]="searchTerm" />
+  <button (click)="search()">Search</button>
+</div> -->
+
+  <!-- <li class="nav-item">
+    <a class="nav-link" routerLink="getContacts">Contact</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="getContactDetails">Details</a>
+  </li> -->
+  <!-- <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li> -->
+</ul>
+<div *ngIf="showError">
+    <strong style="background-color:crimson; color: rgb(128, 96, 48);">
+    Not Allowed !{{errorMessage}}</strong>
+</div>
+<div *ngIf="showData">
+    <h1>Welcome to Customer Information</h1>
+
+
+<table class="table caption-top">
+    <caption>List of users</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">UserId</th>
+        <th scope="col">Admin</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Weather of customerData" >
+            <td >{{Weather.customerId}}</td>
+            <td >{{Weather.firstName}}</td>
+            <td >{{Weather.lastName}}</td>
+            <td >{{Weather.email}}</td>
+            <td >{{Weather.userId}}</td>
+            <td >{{Weather.isActive}}</td>
+          </tr>
+    </tbody>
+  </table>
+</div>
+<!-- "transactionId": 1,
+"transactionType": "2",
+"amount": 23,
+"description": "nooo",
+"date": "2023-11-17T01:26:50.7008418",
+"state": "sucess",
+"accountNumber": 3 -->
